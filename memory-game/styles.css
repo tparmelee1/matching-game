@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*includes padding and border values into total width and height */
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #020f00;
+}
+
+
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative; /*so we can position the front-face and back-face absolutely, relative to it*/
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    position:absolute;
+    border-radius: 10px;
+    background: #058100;
+    backface-visibility: hidden;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.menu {
+    position: relative;
+    margin: auto;
+    border-color: azure;
+}
+
+button#replay, .timer, .counter, .attempts {
+    background: #058100;
+    border-color:azure;
+    border-radius: 10px;
+    height: 50px;
+    width:110px;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.timer, .counter, .attempts {
+    height: 50px;
+    margin-top: 10px;
+    text-align:center;
+    border-color: azure;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h3#counter, h3#countup {
+    transform: translateY(50%);
+}
+
+.directions {
+    background: #058100;
+    width: 110px;
+    border-color:azure;
+    border-radius: 10px;
+    font-size: .6em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+
+

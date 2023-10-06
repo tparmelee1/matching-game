@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <!--
+      Index file for Memory-Game:Cats
+      Author: Trevor Parmelee
+      Date: 8/1/2023  
+        https://github.com/code-sketch/memory-game/tree/master
+        https://releases.jquery.com/jquery/
+        https://www.freecodecamp.org/news/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae/
+      Filename: index.html
+        -->
+  <meta charset="UTF-8">
+
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+    <section class="menu">
+        <div class="reset">
+            <button id="replay" onclick="return confirm('Are you sure you want to reset the board?')">Replay</button>
+        </div>
+        <div class="timer"> <!-- add event listener for click on replay or firstCard -->
+            <h3 id="countup">00:00:00</h3>
+        </div>
+        <div class="counter"> <!--Add event listener for each click on each card-->
+            <h3 id="counter">0 matched</h3>
+        </div>
+        <div class="attempts"> 
+            <h3 id="attempts">0 attempted</h3>
+        </div>
+    </section>
+
+    <section class="memory-game">
+
+        <!--Card 1-->
+        <div class="memory-card" data-framework="Helper">
+            <img class="front-face" src="../memory-game/img/pennyhelping.jpeg" alt="Penny helping to code this game" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Helper">
+            <img class="front-face" src="../memory-game/img/pennyhelping.jpeg" alt="Penny helping to code this game" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+        <!--Card 2-->
+        <div class="memory-card" data-framework="Stretch">
+            <img class="front-face" src="../memory-game/img/pennystretch.jpeg" alt="Penny stretching her arms" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Stretch">
+            <img class="front-face" src="../memory-game/img/pennystretch.jpeg" alt="Penny stretching her arms" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+        <!--Card 3-->
+        <div class="memory-card" data-framework="Tube">
+            <img class="front-face" src="../memory-game/img/pennytube.jpeg" alt="Penny in the tube" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Tube">
+            <img class="front-face" src="../memory-game/img/pennytube.jpeg" alt="Penny in the tube" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+        <!--Card 4-->
+        <div class="memory-card" data-framework="Long">
+            <img class="front-face" src="../memory-game/img/picklelong.jpeg" alt="Pickle showing how long he is" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Long">
+            <img class="front-face" src="../memory-game/img/picklelong.jpeg" alt="Pickle showing how long he is" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+        <!--Card 5-->
+        <div class="memory-card" data-framework="Squint">
+            <img class="front-face" src="../memory-game/img/picklesquint.jpeg" alt="Pickle squinting" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Squint">
+            <img class="front-face" src="../memory-game/img/picklesquint.jpeg" alt="Pickle squinting" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+        <!--Card 6-->
+        <div class="memory-card" data-framework="Yawn">
+            <img class="front-face" src="../memory-game/img/pickleyawn.jpeg" alt="Pickle yawning" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+        <div class="memory-card" data-framework="Yawn">
+            <img class="front-face" src="../memory-game/img/pickleyawn.jpeg" alt="Pickle yawning" />
+            <img class="back-face" src="../memory-game/img/backface.png" alt="Cat Portrait" />
+        </div>
+
+    </section>
+
+</body>
+</html>
